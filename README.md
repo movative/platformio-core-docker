@@ -1,5 +1,5 @@
 # platformio-core-docker
-[![license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/movative/platformio-core-docker/blob/main/LICENSE)
+[![license](https://img.shields.io/badge/license-Apache_2.0-green.svg)](https://github.com/movative/platformio-core-docker/blob/main/LICENSE)
 [![](https://images.microbadger.com/badges/image/movative/platformio-core.svg)](https://microbadger.com/images/movative/platformio-core "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/movative/platformio-core.svg)](https://microbadger.com/images/movative/platformio-core "Get your own version badge on microbadger.com")
 
