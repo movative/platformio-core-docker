@@ -16,21 +16,16 @@ For more information about pio remote read the following links:
 
 ***Example usage in a docker-compose file***
 ```yaml
-version: '2'
+version: '3.9'
 services:
-  pio-remote-agent-local:
+  pio-help:
     build: .
+    container_name: pio-build
     image: movative/pio-remote-agent
-    command: ["start --name hostname"]
-    devices:
-      - "/dev/ttyUSB0:/dev/ttyUSB0"
-      
-  pio-remote-agent-with-share:
-    build: .
+  pio-test-connection:
+    container_name: pio-test-connection
     image: movative/pio-remote-agent
-    command: ["start --name hostname --share"]
-    devices:
-      - "/dev/ttyUSB0:/dev/ttyUSB0"
-    environment:
-      - PLATFORMIO_AUTH_TOKEN: <YOUR-TOKEN>
+    command: ["start", "remote", "agent"]
+    env_file:
+      pio.env
 ```

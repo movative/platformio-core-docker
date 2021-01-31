@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  pio-help:
+    build: .
+    container_name: pio-help
+    image: movative/pio-remote-agent
+  pio-test:
+    container_name: pio-test
+    image: movative/pio-remote-agent
+    command: ["remote", "agent", "start"]
+    env_file:
+      pio.env
+  pio-remote-agent:
+    container_name: pio-remote-agent
+    image: movative/pio-remote-agent
+    command: ["remote", "agent", "start", "--name", "hostname"]
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    env_file: 
+      pio.env
+  pio-shared-remote-agent:
+    container_name: pio-shared-remote-agent
+    image: movative/pio-remote-agent
+    command: ["remote", "agent", "start", "--name", "hostname", "--share"]
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    env_file: 
+      pio.env
