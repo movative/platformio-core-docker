@@ -11,7 +11,7 @@ For more information about pio read the following links:
 
 ***Example usage in a docker-compose file***
 
-Just add an pio.env file next to the docker-compose file and type `docker-compose up pio-test` to the connection to your pio account.
+Just add an pio.env file next to the docker-compose file and type `docker-compose up pio-test` to test the connection to your pio account.
 
 ```yaml
 version: '3.9'
