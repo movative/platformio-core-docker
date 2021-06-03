@@ -1,5 +1,5 @@
 # platformio-core-docker
-<img src="https://github.com/movative/platformio-core-docker/blob/main/platformio.png" alt="OpenVPN Icon" align="left" height="80" width="80" vspace="6"/>
+<img src="https://github.com/movative/platformio-core-docker/blob/main/platformio.png" alt="PlatformIO Icon" align="left" height="80" width="80" vspace="6"/>
 
 [![license](https://img.shields.io/badge/license-Apache_2.0-green.svg)](https://github.com/movative/platformio-core-docker/blob/main/LICENSE)
 [![](https://images.microbadger.com/badges/image/movative/platformio-core.svg)](https://microbadger.com/images/movative/platformio-core "Get your own image badge on microbadger.com")
