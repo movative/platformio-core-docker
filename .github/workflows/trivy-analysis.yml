@@ -16,10 +16,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+    
+      - name: Get version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+            path: 'version.json'
+            prop_path: 'version'
+    
       - name: Build an image from Dockerfile
         run: |
-          docker build -t docker.io/movative/platformio-core:${{ github.sha }} .
+          docker build --build-arg VERSION=${{ steps.version.outputs.prop }} -t docker.io/movative/platformio-core:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
