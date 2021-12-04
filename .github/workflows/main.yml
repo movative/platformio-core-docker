@@ -88,14 +88,3 @@ jobs:
             maintainer=${{ github.repository_owner }} 
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
-          
-      - name: push README to Dockerhub
-        uses: christian-korneck/update-container-description-action@v1
-        env:
-          DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
-          DOCKER_PASS: ${{ secrets.DOCKERHUB_TOKEN }}
-        with:
-          destination_container_repo: movative/platformio-core-docker
-          provider: ${{ env.REGISTRY }}
-          short_description: ${{ github.event.repository.description }}
-          readme_file: 'README.md'
