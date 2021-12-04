@@ -1,4 +1,5 @@
 *.yaml
 *.env
+*.md
 *.png
 .github
