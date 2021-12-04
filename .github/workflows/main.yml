@@ -83,7 +83,6 @@ jobs:
           tags: |
             ${{ steps.meta.outputs.tags }}
             latest
-            labels:
           labels: |
             ${{ steps.meta.outputs.labels }}
             maintainer=${{ github.repository_owner }} 
