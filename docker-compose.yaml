@@ -4,6 +4,10 @@ services:
     build: .
     container_name: pio-help
     image: movative/platformio-core
+  pio-version:
+    container_name: pio-version
+    image: movative/platformio-core
+    command: ["--version"]
   pio-test:
     container_name: pio-test
     image: movative/platformio-core
