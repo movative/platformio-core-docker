@@ -2,10 +2,8 @@
 <img src="https://raw.githubusercontent.com/movative/platformio-core-docker/main/platformio.png" alt="PlatformIO Icon" align="left" height="80" width="80" vspace="6"/>
 
 [![license](https://img.shields.io/badge/license-Apache_2.0-green.svg)](https://github.com/movative/platformio-core-docker/blob/main/LICENSE)
-[![](https://images.microbadger.com/badges/image/movative/platformio-core.svg)](https://microbadger.com/images/movative/platformio-core "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/movative/platformio-core.svg)](https://microbadger.com/images/movative/platformio-core "Get your own version badge on microbadger.com")
 
-This Docker image containerizes the [PlatformIO Core (CLI)](https://docs.platformio.org/) software, which is a professional collaborative platform for embedded development. This image runs the pio client in the entrypoint. Just pass some Arguments to a docker container, as described below, to easily develop remotely and share devices using the remote agent feature from the pio client.
+This Docker image containerizes the [PlatformIO Core (CLI)](https://docs.platformio.org/) software, which is a professional collaborative platform for embedded development. This repo contains an installed pio cli in the entrypoint.
 
 For more information about pio read the following links:
 - https://docs.platformio.org/en/latest/plus/pio-remote.html
@@ -13,7 +11,8 @@ For more information about pio read the following links:
 
 ***Example usage in a docker-compose file***
 
-Just add an pio.env file next to the docker-compose file and type `docker-compose up pio-test` to test the connection to your pio account.
+The docker-compose file contains various examples.
+To use the pio client just add an pio.env file next to the docker-compose file and type `docker-compose up pio-test` and test the connection to your pio account.
 
 ```yaml
 version: '3.9'
