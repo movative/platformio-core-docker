@@ -89,9 +89,13 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           
-      - name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v2
+      - name: push README to Dockerhub
+        uses: christian-korneck/update-container-description-action@v1
+        env:
+          DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKERHUB_TOKEN }}
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: movative/platformio-core-docker
+          destination_container_repo: movative/platformio-core-docker
+          provider: ${{ env.REGISTRY }}
+          short_description: ${{ github.event.repository.description }}
+          readme_file: 'README.md'
