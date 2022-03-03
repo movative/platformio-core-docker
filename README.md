@@ -1,4 +1,4 @@
-# platformio-core-docker [![license](https://img.shields.io/badge/license-Apache_2.0-green.svg)](https://github.com/movative/platformio-core-docker/blob/main/LICENSE)
+# platformio-core-docker [![license](https://img.shields.io/badge/license-Apache_2.0-green.svg)](https://github.com/movative/platformio-core-docker/blob/main/LICENSE) [![Docker](https://github.com/movative/platformio-core-docker/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/movative/platformio-core-docker/actions/workflows/main.yml)
 <img src="https://raw.githubusercontent.com/movative/platformio-core-docker/main/platformio.png" alt="PlatformIO Icon" align="left" height="80" width="80" vspace="6"/>
 
 This Docker image containerizes the [PlatformIO (PIO)](https://docs.platformio.org/) software, which is a professional collaborative platform for embedded development. This repo contains an installed pio cli in the entrypoint.
