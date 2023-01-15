@@ -1,4 +1,4 @@
-FROM python:3.8.12-slim-bullseye
+FROM python:3.11.1-slim-bullseye
 ARG VERSION
 LABEL maintainer="38313840+movative@users.noreply.github.com"
 RUN useradd -ms /bin/bash pio
